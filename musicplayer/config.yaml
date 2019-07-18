@@ -1,0 +1,6 @@
+client_id: 'YOUR_CLIENT_ID'
+client_secret: 'YOUR_SECRET_KEY'
+access_token_url: 'https://accounts.spotify.com/api/token'
+api_version: 'v1'
+api_url: 'https://api.spotify.com'
+auth_method: 'AUTHORIZATION_CODE'
