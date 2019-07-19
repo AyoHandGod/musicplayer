@@ -20,3 +20,4 @@ class ConfigurationTest(unittest.TestCase):
     def test_can_load_config_file(self):
         config = read_config()
         self.assertIs(type(config), Config, "Config is not a namedtuple")
+
