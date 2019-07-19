@@ -135,3 +135,5 @@ gen
 
 # Specified files
 config.yaml
+/musicplayer/config.yaml
+/tests/config.yaml
