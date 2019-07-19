@@ -37,8 +37,7 @@ def read_config() -> Config:
             config['base_url'] = f'{config["api_url"]}/{config["api_version"]}'
 
             auth_method = config['auth_method']
-            config['auth_method']
-            AuthMethod.__members__.get(auth_method)
+            config['auth_method'] = AuthMethod.__members__.get(auth_method)
 
             return Config(**config)
 
