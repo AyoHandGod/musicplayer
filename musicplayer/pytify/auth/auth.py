@@ -4,9 +4,8 @@ import base64
 import json
 
 from musicplayer.pytify.auth import AuthMethod
-from musicplayer.pytify.core.config import Config
 from .authorization import Authorization
-from ..core import BadRequestError
+from musicplayer.pytify.core.exceptions import BadRequestError
 
 
 def get_auth_key(client_id: str, client_secret: str):
@@ -43,7 +42,7 @@ def _authorization_code(conf):
                        '. The file .pytify was not found.'))
 
 
-def _client_credentials(conf: Config):
+def _client_credentials(conf):
     """
     Parse config and send request to Spotify in order to create
     Authorization.
@@ -119,7 +118,7 @@ def _refresh_access_token(auth_key, refresh_token):
     return Authorization(access_token, token_type, expires_in, scope, None)
 
 
-def authenticate(conf: Config):
+def authenticate(conf):
     """
     Use Config object to obtain access_token.
 
