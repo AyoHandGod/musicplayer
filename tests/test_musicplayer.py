@@ -2,7 +2,7 @@ import unittest
 from collections import namedtuple
 
 from musicplayer import __version__
-from musicplayer.pytify.auth import AuthMethod, Authorization
+from musicplayer.pytify.auth import AuthMethod, Authorization, get_auth_key
 from musicplayer.pytify.core import read_config
 from musicplayer.pytify.core.config import Config
 
@@ -55,8 +55,17 @@ class AuthorizationTest(unittest.TestCase):
     def test_authorization_model_exists(self):
         auth = Authorization(access_token='test', token_type='test_token', expires_in='100',
                              scope='test_scope', refresh_token='refresh_test')
-        self.assertIs(type(auth), Authorization(), "Type is not Authorization.")
+        self.assertIs(type(auth), Authorization, "Type is not Authorization.")
+
+    def test_get_auth_key_function_returns_base64(self):
+        conf = read_config()
+        auth_key = get_auth_key(conf.client_id, conf.client_secret)
+        print(auth_key)
+
 
 
 class BadRequestErrorTest(unittest.TestCase):
-    pass
+    def test_can_raise_bad_request_error(self):
+
+        self.assertRaises()
+
