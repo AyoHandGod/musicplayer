@@ -8,11 +8,11 @@ from musicplayer.pytify.core import read_config
 
 def _search(criteria, auth, search_type):
     """
-    Query Spotify for the specified search_type item.
+    Query Spotify API for the specified criteria item.
 
     Args:
-        criteria: Represent the search target.
-        auth: Authorization information.
+        criteria: The target of the query.
+        auth: Spotify authorization information.
         search_type: Search type value.
 
     Returns:
@@ -34,6 +34,16 @@ def _search(criteria, auth, search_type):
 
 
 def search_artist(criteria, auth):
+    """
+    Search for Artist via Spotify API.
+
+    Args:
+        criteria: Target of API query.
+        auth: API Auth information.
+
+    Returns:
+        Result data in JSON format.
+    """
     return _search(criteria, auth, SearchType.ARTIST)
 
 

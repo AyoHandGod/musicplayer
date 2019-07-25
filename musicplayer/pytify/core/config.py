@@ -8,7 +8,7 @@ import os  # build path to yaml config file
 import yaml  # read the YAML config file
 from collections import namedtuple
 
-from musicplayer.pytify.auth import AuthMethod
+from musicplayer.pytify.auth.auth import AuthMethod
 
 Config = namedtuple('Config', ['client_id',
                                'client_secret',
