@@ -3,7 +3,7 @@ import curses.panel
 from uuid import uuid1
 
 
-class Panel:
+class Panel(object):
 
     def __init__(self, title: str, dimensions: tuple):
         """
