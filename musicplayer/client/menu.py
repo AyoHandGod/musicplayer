@@ -1,8 +1,8 @@
 import curses
 import curses.panel
 
-from alignment import Alignment
-from panel import Panel
+from .alignment import Alignment
+from .panel import Panel
 
 
 NEW_LINE = 10

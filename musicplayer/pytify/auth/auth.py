@@ -3,9 +3,9 @@ import os
 import base64
 import json
 
-from musicplayer.pytify.auth import AuthMethod
+from pytify.auth import AuthMethod
 from .authorization import Authorization
-from musicplayer.pytify.core.exceptions import BadRequestError
+from pytify.core.exceptions import BadRequestError
 
 
 def get_auth_key(client_id: str, client_secret: str):
