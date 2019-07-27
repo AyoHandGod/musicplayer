@@ -8,7 +8,7 @@ import os  # build path to yaml config file
 import yaml  # read the YAML config file
 from collections import namedtuple
 
-from musicplayer.pytify.auth import AuthMethod
+from musicplayer.pytify.auth.auth import AuthMethod
 
 Config = namedtuple('Config', ['client_id',
                                'client_secret',
@@ -37,8 +37,7 @@ def read_config() -> Config:
             config['base_url'] = f'{config["api_url"]}/{config["api_version"]}'
 
             auth_method = config['auth_method']
-            config['auth_method']
-            AuthMethod.__members__.get(auth_method)
+            config['auth_method'] = AuthMethod.__members__.get(auth_method)
 
             return Config(**config)
 
@@ -58,4 +57,6 @@ def read_config() -> Config:
         * auth_method can be CLIENT_CREDENTIALS or 
         AUTHORIZATION_CODE""")
         raise
+
+
 

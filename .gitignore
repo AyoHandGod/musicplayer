@@ -135,5 +135,5 @@ gen
 
 # Specified files
 config.yaml
-/musicplayer/config.yaml
+/musicplayer/pytify/auth/config.yaml
 /tests/config.yaml
