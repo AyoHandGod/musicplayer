@@ -1,14 +1,14 @@
-from menu_item import MenuItem
+from .menu_item import MenuItem
 
-from musicplayer.pytify.core import search_artist
-from musicplayer.pytify.core import get_album_tracks
-from musicplayer.pytify.core import get_artist_albums
-from musicplayer.pytify.core import play
+from pytify.core import search_artist
+from pytify.core import get_album_tracks
+from pytify.core import get_artist_albums
+from pytify.core import play
 
 from .empty_results_error import EmptyResultError
 
-from musicplayer.pytify.auth import authenticate
-from musicplayer.pytify.core import read_config
+from pytify.auth import authenticate
+from pytify.core import read_config
 
 
 class DataManager(object):

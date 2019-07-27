@@ -3,7 +3,7 @@ import json
 from urllib.parse import urlencode
 
 from .search_type import SearchType
-from musicplayer.pytify.core import read_config
+from pytify.core import read_config
 
 
 def _search(criteria, auth, search_type):
