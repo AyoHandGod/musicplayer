@@ -15,7 +15,7 @@ class Panel(object):
         """
         height, width, y, x = dimensions
 
-        self._win = curses.initscr().newwin(height, width, y, x)
+        self._win = curses.initscr()
         self._win.box()
         self._panel = curses.panel.new_panel(self._win)
         self.title = title
@@ -73,7 +73,7 @@ class Panel(object):
         """
         return not self._panel.hidden()
 
-    def __eq__(self, other: Panel):
+    def __eq__(self, other):
         """
         Compare whether two panels are the same by comparing
         uuid values.

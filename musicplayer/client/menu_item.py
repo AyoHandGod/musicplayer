@@ -36,3 +36,14 @@ class MenuItem(object):
 
     def __str__(self):
         return self.label
+
+
+if __name__ == '__main__':
+    for i in range(1, 101):
+        out = ""
+        if i % 3 == 0:
+            out = "fizz"
+        if i % 5 == 0:
+            out += "buzz"
+        if out:
+            print(out)
