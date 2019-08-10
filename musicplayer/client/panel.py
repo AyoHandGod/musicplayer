@@ -15,7 +15,7 @@ class Panel(object):
         """
         height, width, y, x = dimensions
 
-        self._win = curses.initscr()
+        self._win = curses.newwin(dimensions)
         self._win.box()
         self._panel = curses.panel.new_panel(self._win)
         self.title = title
